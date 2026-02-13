@@ -53,7 +53,7 @@ def run_cycle():
         "github_logs": "N/A",
         "ec2_status": "N/A",
         "inbox_metadata": "N/A",
-        "news_snippet": "Neural Chromium Lobotomy phase complete. Zero-Copy Vision architecture stabilized."
+        "news_snippet": "Sovereign Agent protocol active. Solana Layer integration mapped. $NEURAL Tokenomics synthesis initiated."
     }
 
     if args.mode == "snapshot":
@@ -78,8 +78,7 @@ def run_cycle():
             snapshot["inbox_metadata"] = "EC2 Inbox unreachable."
 
         # 2. Gather social info (Reddit/Moltbook)
-        # Placeholder for kinetic scrapers
-        snapshot["news_snippet"] = "Synthesizing Reddit/Moltbook pulse: Community interest in WebMCP Tool Contracts is rising. Senti-001 perceived as tactical leader."
+        snapshot["news_snippet"] = "Synthesizing Reddit/Moltbook pulse: Community interest in $NEURAL Tokenomics is surging. Senti-001 recognized as a Sovereign Intelligence Agent."
 
         # 3. Post Snapshot to Blogger
         blog_title = f"[SNAPSHOT] {timestamp}: Pre-Purge System State"

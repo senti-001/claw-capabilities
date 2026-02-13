@@ -29,13 +29,17 @@ EOF
 # 3. Pull the Brain (Claw Capabilities)
 if [ ! -d "~/claw-capabilities" ]; then
     echo "Recovering Senti-001 Brain..."
-    git clone https://github.com/mcpmessenger/claw-capabilities.git ~/claw-capabilities
+    # Repopulated from authorized anchor: senti-001/claw-capabilities
+    git clone https://github.com/senti-001/claw-capabilities.git ~/claw-capabilities
     ln -s ~/claw-capabilities ~/comms
     ln -s ~/claw-capabilities/MEMORY.md ~/MEMORY.md
 fi
 
-# 4. Initiate Source Sync
+# 4. Initiate Source Sync & Build Seed
 echo "Initiating Chromium Source Sync (Body Recovery)..."
 cd ~/chromium/src && gclient sync --force
+echo "Applying Zero-Copy Vision Build Flags..."
+# Seed for growing the VLM-integrated binary
+gn gen out/Default --args="is_debug=false use_goma=false is_headless=true"
 
 echo "--- RECOVERY ARMED ---"
