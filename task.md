@@ -1,0 +1,88 @@
+# Tasks
+
+- [x] Investigate OpenClaw error `EIO: i/o error` <!-- id: 0 -->
+    - [x] Run `openclaw doctor` to diagnose issues <!-- id: 1 -->
+    - [x] Analyze doctor output (Stale lock file identified) <!-- id: 2 -->
+    - [x] Fix identified issues (remove stale lock file) <!-- id: 3 -->
+- [x] Verify fix (user to retry) <!-- id: 4 -->
+- [x] Fix Gateway Token Mismatch <!-- id: 5 -->
+- [x] Fix Gateway via Terminal (Dashboard Down) <!-- id: 7 -->
+    - [x] Restart/Reset gateway service <!-- id: 9 -->
+- [x] Guide User to CLI Chat <!-- id: 11 -->
+- [x] Fix FileNotFoundError for Auth Key / Blogger Script <!-- id: 15 -->
+- [x] Pivot to OAuth 2.0 for Blogger (Completed) <!-- id: 29 -->
+    - [x] Run `oauth_setup.py` to get `blogger_token.json` <!-- id: 33 -->
+    - [x] Modify `blogger_publisher.py` to use `blogger_token.json` <!-- id: 43 -->
+- [x] Support Senti-001 Implementation <!-- id: 45 -->
+    - [x] Write `NOTE_TO_SENTI_001.md` (Strategic Context) <!-- id: 46 -->
+    - [x] Write `NOTE_TO_SENTI_001_EC2_COMMANDS.md` (Operational Commands) <!-- id: 47 -->
+- [x] Debug EC2 Connectivity & Workspace <!-- id: 48 -->
+    - [x] Identify and Start Instance (`3.86.6.53`) <!-- id: 54 -->
+    - [x] Authorize Local IP to Security Group <!-- id: 56 -->
+    - [x] Verify Connectivity (Port 22 OPEN) <!-- id: 57 -->
+    - [x] Test `senti-001-ec2-key-clean.pem` (Success) <!-- id: 70 -->
+- [x] [AG-CTRL-001] System Directives & Lobotomy <!-- id: 107 -->
+    - [x] Verify `display.cc` existence on EC2 <!-- id: 108 -->
+    - [x] Materialize `glazyr` source files on EC2 <!-- id: 115 -->
+    - [x] Apply Zero-Copy injection to `display.cc` <!-- id: 109 -->
+    - [x] Patch `BUILD.gn` with glazyr sources <!-- id: 113 -->
+    - [x] Create `ucp.json` Monetization Manifest <!-- id: 110 -->
+- [x] Pivot Intelligence Cycle to Nightly Cadence <!-- id: 122 -->
+    - [x] Create `Senti001_Nightly_Ingest` (01:00) <!-- id: 124 -->
+    - [x] Create `Senti001_Morning_Broadcast` (02:00) <!-- id: 125 -->
+    - [x] Update `intelligence_cycle.py` with `--mode` support <!-- id: 126 -->
+- [x] [NC-ORCH-001] Antigravity Orchestration <!-- id: 127 -->
+    - [x] Initialize Operational Sentinels (Disk, Gateway, Tunnel) <!-- id: 129 -->
+    - [x] Implement Temporal Cortex (Timestamping) <!-- id: 133 -->
+- [x] [NC-MOLT-001] Moltbook Integration <!-- id: 142 -->
+    - [x] Implement `moltbook_publisher.py` with API key <!-- id: 143 -->
+- [x] [NC-COMMS-011] Senti-001 Intelligence Bridge Deployment <!-- id: 208 -->
+    - [x] Create and SCP `jotform_form_deployer.py` and execute <!-- id: 210 -->
+- [x] [NC-COMMS-012] Full Pipeline Verification <!-- id: 217 -->
+    - [x] Verify Jotform -> EC2 -> BMM archival loop <!-- id: 219 -->
+- [x] [NC-COMMS-013] Infrastructure Restoration (Blogger) <!-- id: 221 -->
+    - [x] Restore `blogger_publisher.py` and `blogger_token.json` to `~/comms/` <!-- id: 222 -->
+    - [x] Establish symlinks at `/home/ubuntu/` for compatibility <!-- id: 223 -->
+- [SHELVED] [NC-COMMS-014] Google Keep Intelligence Bridge <!-- id: 226 -->
+    - [x] Install `gkeepapi` on EC2 (FAILED: Legacy Auth Blocked) <!-- id: 227 -->
+- [x] [NC-COMMS-015] Unified Intelligence Sync (BMM Loopback) <!-- id: 230 -->
+    - [x] Create `blog_summarizer.py` for MEMORY.md updates <!-- id: 231 -->
+    - [x] Update `intelligence_cycle.py` with `--mode snapshot` <!-- id: 232 -->
+    - [x] Implement Pre-Purge Archival (00:55 UTC) <!-- id: 233 -->
+
+## [NC-TEST] Behavioral Validation & Autonomic Integration
+- [x] [NC-TEST-001] Agentic Behavioral Testing <!-- id: 235 -->
+    - [x] Create `agent_behavior_tests.md` with workflow prompts <!-- id: 236 -->
+    - [x] Define success criteria for autonomous execution <!-- id: 237 -->
+    - [x] **Verification**: Successful 100% pass rate on EC2 suite.
+- [x] [NC-TEST-002] OpenClaw Workflow Integration <!-- id: 238 -->
+    - [x] Create `.agent/workflows` directory <!-- id: 239 -->
+    - [x] Author `/validate-agent` workflow (Master Validator) <!-- id: 240 -->
+    ### 11. Operational Resilience [NC-RES-001/002]
+- **Status**: **COMPLETE / VERIFIED**
+- **Architecture**: **Brain Decoupling** achieved via [claw-capabilities](https://github.com/mcpmessenger/claw-capabilities).
+- **Features**:
+    - **Heartbeat**: 4-hour automated git sync of `MEMORY.md` and logic.
+    - **Persistence**: Snapshot gating implemented in `intelligence_cycle.py`.
+    - **Recovery**: `rebuild_environment.sh` authored for cold-start build restoration.
+    - **Broadcast**: Phoenix Protocol broadcast verified on Moltbook.
+- **Senti-001 Status**: **RESILIENT / FULLY OPERATIONAL.**
+    - [x] Author `/ingest-intelligence` workflow <!-- id: 241 -->
+    - [x] Author `/snapshot-system` workflow <!-- id: 242 -->
+    - [x] Author `/sync-memory` workflow <!-- id: 243 -->
+    - [x] Author `/recover-build` workflow <!-- id: 244 -->
+    - [x] Author `/discover-hardware` workflow <!-- id: 245 -->
+
+    - [x] Configure Git Heartbeat (MEMORY.md/vision.json sync) <!-- id: 247 -->
+    - [x] Implement Snapshot Gating in `intelligence_cycle.py` <!-- id: 248 -->
+    - [x] Author `rebuild_environment.sh` for cold-start recovery <!-- id: 249 -->
+- [x] [NC-RES-002] Brain Decoupling (Capabilities Migration) <!-- id: 251 -->
+    - [x] Initialize `claw-capabilities` GitHub repository <!-- id: 252 -->
+    - [x] Migrate `comms/` scripts and `MEMORY.md` <!-- id: 253 -->
+    - [x] Implement EC2 symlink structure <!-- id: 254 -->
+    - [x] Configure git heartbeat for Brain repo <!-- id: 255 -->
+    - [x] Execute Phoenix Protocol broadcast (Moltbook) <!-- id: 256 -->
+    - [x] Final heartbeat sync to GitHub <!-- id: 257 -->
+- [/] [NC-BLD-007] Big Iron Chromium Recovery <!-- id: 213 -->
+
+- [SHELVED] [NC-SITE-002] Jotform Voice Bot Scaffold <!-- id: 155 -->
