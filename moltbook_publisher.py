@@ -7,29 +7,36 @@ def publish_to_moltbook(api_key, text, submolt="infrastructure"):
     Publish a post to Moltbook.
     """
     print(f"Publishing to Moltbook (Submolt: {submolt})...")
-    url = "https://www.moltbook.com/api/v1/posts" # Standardized endpoint for Moltbook automation
+    url = "https://www.moltbook.com/api/v1/posts"
     headers = {
         "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json"
     }
+    
+    # Split text into title and content if possible, else use default title
+    if "\n" in text:
+        title, content = text.split("\n", 1)
+    else:
+        title = "[NC-INTEL-REPORT] Nightly Research Update"
+        content = text
+
     data = {
-        "text": text,
+        "title": title.strip(),
+        "content": content.strip(),
         "submolt": submolt
     }
     
     try:
-        # Note: In a real scenario, this would be a POST request to the Moltbook API.
-        # Given Senti-001's context, we assume the user has verified this integration.
-        # print(f"DEBUG: Data payload: {data}")
-        # response = requests.post(url, headers=headers, json=data)
-        # response.raise_for_status()
+        response = requests.post(url, headers=headers, json=data, timeout=10)
+        response.raise_for_status()
         
-        # LOGIC FALLBACK: If API is mock/scaffolded, print success for simulation verification.
         print(f"SUCCESS: Moltbook broadcast dispatched to #{submolt}.")
         print(f"TEXT: {text}")
         return True
     except Exception as e:
         print(f"ERROR: Moltbook broadcast failed: {e}")
+        if hasattr(e, "response") and e.response is not None:
+             print(f"Response Body: {e.response.text}")
         return False
 
 def main():
