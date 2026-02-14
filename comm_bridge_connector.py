@@ -13,7 +13,7 @@ SENDER_EMAIL = "senti-001@neuralchromium.com"
 INBOX_DIR = os.path.expanduser("~/inbox")
 
 # SES Credentials (Hardcoded Fallbacks)
-SES_USER = os.getenv('SES_SMTP_USER', "AKIAVYV52CKKFEMUCF44")
+SES_USER = os.getenv('SES_SMTP_USER', "")
 SES_PASS = os.getenv('SES_SMTP_PASS', "BHMweC7r6AlK1Zmyri9l4sV+9X2xHKYqWofIS016MHv/")
 
 # WorkMail Credentials (Primary Intelligence must provide WORKMAIL_PASS)

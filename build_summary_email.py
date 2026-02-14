@@ -14,7 +14,7 @@ SMTP_PORT = 587
 SENDER_EMAIL = "senti-001@neuralchromium.com"
 
 # SMTP Credentials (IAM User) with Hardcoded Fallbacks
-SMTP_USERNAME = os.getenv('SES_SMTP_USER', "AKIAVYV52CKKFEMUCF44")
+SMTP_USERNAME = os.getenv('SES_SMTP_USER', "")
 SMTP_PASSWORD = os.getenv('SES_SMTP_PASS', "BHMweC7r6AlK1Zmyri9l4sV+9X2xHKYqWofIS016MHv/")
 
 def send_build_summary(summary_data):
