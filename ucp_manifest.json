@@ -1,0 +1,29 @@
+{
+  "mission_metadata": {
+    "project": "Neural Chromium",
+    "sovereign_entity": "MAGNETAR SENTIENT, LLC",
+    "active_phase": "Phase 4.1: High-Performance Innovation Sprint",
+    "status": "OPERATIONAL"
+  },
+  "agent_roles": {
+    "Senti-001": {
+      "focus": "Tactical Intelligence & Communication",
+      "state": "ACTIVE"
+    },
+    "Builder-006": {
+      "focus": "High-Performance Engineering & Build Orchestration",
+      "state": "ACTIVE"
+    }
+  },
+  "build_environment": {
+    "node_id": "SENTI-BIG-IRON-GCP",
+    "sync_status": "65%",
+    "disk_usage": "Critical Path Secured"
+  },
+  "knowledge_pointers": {
+    "architecture": "NC-ARCH-001",
+    "tokenomics": "NC-TOKEN-001",
+    "compliance": "NC-GRANT-001"
+  },
+  "last_updated": "2026-02-18 23:25"
+}

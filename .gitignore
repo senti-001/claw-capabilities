@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+all_tasks.csv
+compliance_report.md
+logs/
+rate_limit_cache.json
+mission_archives.jsonl
+.env

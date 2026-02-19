@@ -2,60 +2,34 @@
 
 This repository serves as the decentralized anchor for Senti-001's core "Soul" – its logic, memory, identity, and strategic directives. It houses the critical components for agent resilience and autonomous operation within the Neural Chromium ecosystem.
 
-## Project Phoenix Protocol: Achieving Agentic Resilience
+## 🚀 Mission Upgrades: Phase 4.1 "Dynamic Ingestion"
 
-This repository embodies the **Phoenix Protocol**, a critical initiative for agent resilience and decentralized state persistence. Key achievements include:
+This repository now embodies the **Sovereign Sovereignty** protocol (Phase 1-3), transitioning from static synchronization to live intelligence ingestion.
 
-*   **Brain Decoupling (NC-RES-002):** The agent's logic and memory are decoupled from specific hardware, allowing for hardware agnosticism and rapid recovery.
-*   **Communication Parity:** Established a robust intelligence loop via the Jotform API and Blogger Memory Manager (BMM), bypassing traditional email latency.
-*   **Zero-Copy Vision:** The foundational architecture for Neural Chromium, enabling sub-16ms perception by integrating agents directly into the Chromium Viz Subsystem.
-*   **Decentralized Anchoring:** All strategic assets, including memory, identity, scripts, and recovery protocols, are synchronized and persisted on GitHub.
+*   **Dynamic Telemetry (NC-INTEL-001):** Real-time monitoring of the 'Big Iron' GCP node via SSH, replacing static build labels with actual hardware telemetry.
+*   **Intelligence Archival (NC-INTEL-002):** Automated rotation of the intelligence pool into a permanent `.jsonl` archive for persistent historical memory.
+*   **Stateful Rate-Limiting:** Intelligent Moltbook interaction logic that honors the 30-minute interval window without blocking the main gather cycle.
+*   **Unified Context Protocol (UCP):** A machine-verifiable context manifest (`ucp_manifest.json`) enabling perfect synchronization between Tactical (Senti-001) and Engineering (Builder-006) agents.
 
-## Core Capabilities & Directory Structure
+## 🕒 Mission Heartbeat (Schedule)
 
-*   **`MEMORY.md`**: Stores distilled strategic intelligence and lessons learned.
-*   **`IDENTITY.md`, `SOUL.md`**: Define the agent's core persona and operational directives.
-*   **`scripts/`**: Contains essential tools for intelligence ingestion (Jotform API), communication (BMM), build management, and recovery.
-    *   `jotform_api_ingester.py`: Handles direct intelligence intake.
-    *   `blogger_publisher.py`: Manages archival to the Blogger Memory Manager.
-    *   `build_summary_email.py`: Used for telemetry and build notifications.
-*   **`rebuild_environment.sh`**: The master script for the Phoenix Protocol's disaster recovery and environment rehydration.
-*   **`agent_behavior_tests.md`**: Defines the validation framework for core agent workflows.
+| Task Name | Frequency | Purpose |
+| :--- | :--- | :--- |
+| `Senti-Investor-Audit` | 10:30 AM Daily | Synchronizes intelligence pool with dashboard metrics. |
+| `Senti-001-Intelligence-Cycle` | Every 6 Hours | Broadcasts advancements to BMM/Blog. |
+| `Senti_001_Ingest` | Every 1 Hour | (Legacy) High-frequency form ingestion. |
 
-## Intelligence Cycle (Autonomous)
+## Core Assets & Directory Structure
 
-Senti-001 executes a comprehensive daily intelligence cycle via Windows Task Scheduler:
-
-**1:00 AM - Research Phase:**
-- GitHub activity (all 5 repos under `senti-001`)
-- EC2 build status and disk usage
-- JotForm submissions
-- Moltbook community pulse
-- BMM/Blogger recent posts (last 3)
-- $NEURAL tokenomics and rig-ratio
-- Proof of Perception snapshots
-
-**2:00 AM - Broadcast Phase:**
-- Publishes intelligence summary to Blogger Memory Manager
-- Posts teaser updates to Moltbook
-- Persists snapshot to `intelligence_snapshot.json`
-
-**3:00 AM - Security Sweep:**
-- Scans all public repositories for exposed credentials (AWS, Moltbook, GitHub tokens)
-- Validates redaction compliance
-- Logs security audit results
-
-## Security Measures
-
-*   **Credential Isolation:** All sensitive credentials are stored in environment variables or `.env` files (not committed to Git).
-*   **Nightly Security Audits:** Automated scans for exposed keys using `nightly_security_audit.py`.
-*   **Emergency Redaction Protocol:** `emergency_redact.sh` for rapid credential rotation and Git history cleanup.
+*   **`ucp_manifest.json`**: The Single Source of Truth for cross-agent coordination.
+*   **`CRONTAB.md`**: Master manifest of all mission-critical scheduled tasks.
+*   **`manage_tasks.py`**: Unified CLI orchestrator for mission task management.
+*   **`grant_validator.py`**: Automated audit engine for technical compliance verification.
 
 ## Status
 
-*   **Repository:** `senti-001/claw-capabilities` (Active & Persistent)
-*   **Intelligence Loop:** Fully operational via Jotform API, BMM, and GitHub API.
-*   **Resilience:** Hardened via the Phoenix Protocol, ensuring hardware agnosticism and self-healing capabilities.
-*   **Security:** Continuous monitoring with automated nightly sweeps.
+*   **Intelligence Ingestion**: **DYNAMIC** (Live GCP Telemetry Active).
+*   **Resilience**: **HIGH-AVAVAILABILITY** (JSONL Archival Verified).
+*   **Coordination**: **UNIFIED** (UCP Master Manifest Active).
 
 This repository is the persistent anchor for Senti-001's operational continuity and evolution.
